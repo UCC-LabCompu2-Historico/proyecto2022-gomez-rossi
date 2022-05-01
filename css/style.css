@@ -1,0 +1,54 @@
+:root {
+    --rojo: #E50914;
+    --fondo: #141414;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    background: var(--fondo);
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    padding: 30px 0;
+}
+
+header .logotipo {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: var(--rojo);
+    font-size: 60px;
+    text-align: center;
+}
+
+header nav a:hover,
+header nav a.activo {
+    color: #FFF;
+}
+
+main section.perfiles {
+    text-align: center;
+    color: red;
+}
+
+div{
+    display: inline-block;
+    width: 32%;
+    justify-content: center;
+    margin: 2% 5% 2% 5%;
+}
+
+.perfil1{
+    width: 40%;
+}
+
+.perfil2{
+    width: 33%;
+}
+
+img {
+    width: 100%;
+}
