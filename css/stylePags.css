@@ -1,0 +1,83 @@
+:root {
+    --rojo: #E50914;
+    --fondo: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--fondo);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+    width: 90%;
+    margin: auto;
+    align-content: center;
+}
+
+header {
+    padding: 30px 0;
+}
+
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logotipo {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: var(--rojo);
+    font-size: 60px;
+    text-align: center;
+}
+
+.opciones{
+    font-weight: 600;
+    font-size: large;
+    margin-bottom: 0.9em;
+    color: white;
+}
+
+.opciones1{
+    font-weight: 600;
+    font-size: x-large;
+    margin-bottom: 0.9em;
+    color: white;
+}
+
+.subtitulo{
+    font-weight: 600;
+    font-size: xx-large;
+    margin-bottom: 0.9em;
+    color: red;
+    text-align: center;
+}
+
+.imagen {
+    width: 50%;
+    text-align: center;
+}
+
+.imagen1{
+    width: 50%;
+    text-align: center;
+}
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+    header .logotipo {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    header .contenedor {
+        flex-direction: column;
+        text-align: center;
+    }
+}
