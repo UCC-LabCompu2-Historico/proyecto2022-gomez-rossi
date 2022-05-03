@@ -102,13 +102,26 @@ header nav a.activo {
 
 .opciones{
     font-weight: 600;
-    font-size: large;
-    margin-bottom: 0.6em;
+    font-size: x-large;
+    margin-bottom: 0.9em;
+    margin-top: 0.8em;
+    margin-left: 0.8em;
     color: white;
 }
 
+.imagen{
+    width: 100%;
+    height: 100%;
+    margin-left: 0.8em;
+}
+
+.imagen1{
+    width: 70%;
+}
+
 img {
-    width: 15%
+    width: 20%;
+
 }
 
 /* ---- ----- ----- Media Queries ----- ----- ----- */

@@ -69,6 +69,19 @@ header .logotipo {
     width: 50%;
     text-align: center;
 }
+.boton{
+    background: none;
+    font-family: 'Open Sans', sans-serif;
+    color: #AAAAAA;
+    margin-top: 0.9em;
+    margin-left: 0.9em;
+}
+
+.boton:hover {
+    background: #fff;
+    color: #000;
+}
+
 /* ---- ----- ----- Media Queries ----- ----- ----- */
 @media screen and (max-width: 800px) {
     header .logotipo {
