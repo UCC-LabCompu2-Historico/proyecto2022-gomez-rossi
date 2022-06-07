@@ -1,0 +1,73 @@
+@import
+url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
+body{
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+    background-color: black;
+}
+header .logotipo {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: red;
+    font-size: 60px;
+    text-align: center;
+}
+h1{
+    font-weight: 300;
+    margin: 0;
+    padding: 10px;
+    font-size: 20px;
+    color: red;
+}
+.boton{
+    background: none;
+    font-family: 'Open Sans', sans-serif;
+    color: #AAAAAA;
+    margin-top: 0.9em;
+    margin-left: 0.9em;
+    text-align: left;
+}
+.question{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.answers {
+    margin-bottom: 20px;
+    text-align: left;
+    display: inline-block;
+}
+.answers label{
+    display: block;
+    margin-bottom: 10px;
+}
+button{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    background-color: red;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+    padding: 15px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+button:hover{
+    background-color: orange;
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+    header .logotipo {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    header .contenedor {
+        flex-direction: column;
+        text-align: center;
+    }
+}
