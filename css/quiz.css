@@ -2,10 +2,12 @@
 url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
 body{
     font-size: 20px;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Work Sans', cursive;
     color: white;
     font-weight: 300;
     background-color: black;
+    line-height: 60px;
+    text-align: left;
 }
 header .logotipo {
     font-family: 'Bebas Neue', cursive;
@@ -29,19 +31,7 @@ h1{
     margin-left: 0.9em;
     text-align: left;
 }
-.question{
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-.answers {
-    margin-bottom: 20px;
-    text-align: left;
-    display: inline-block;
-}
-.answers label{
-    display: block;
-    margin-bottom: 10px;
-}
+
 #botonAbajo{
     font-family: 'Work Sans', sans-serif;
     font-size: 18px;
