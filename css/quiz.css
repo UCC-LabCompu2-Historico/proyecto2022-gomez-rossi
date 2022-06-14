@@ -32,7 +32,7 @@ h1{
     text-align: left;
 }
 
-#botonAbajo{
+#botonResultado{
     font-family: 'Work Sans', sans-serif;
     font-size: 18px;
     background-color: red;
@@ -44,6 +44,20 @@ h1{
     margin-bottom: 5px;
     margin-top: 15px;
 }
+
+.botonReintentar{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    background-color: darkblue;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+    padding: 15px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
 button:hover{
     background-color: grey;
 }

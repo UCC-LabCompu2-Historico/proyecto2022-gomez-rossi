@@ -1,6 +1,7 @@
 const contenedor = document.getElementById("test");
-const botonRes = document.getElementById("botonAbajo");
+const botonRes = document.getElementById("botonResultado");
 const resultadoTest = document.getElementById("resultado");
+
 
 const preguntas = [
     {
@@ -95,13 +96,19 @@ const preguntas = [
     },
 ];
 
+/**
+ * Mustra el quiz al usuario
+ * @method mostrarTest
+ * @return - muestra el quiz en pantalla
+ */
+
 function mostrarTest() {
     const preguntasYrespuestas = [];
 
     preguntas.forEach((preguntaActual, numeroDePregunta) => {
         const respuestas = [];
 
-        for (letraRespuesta in preguntaActual.respuestas) {
+        for (let letraRespuesta in preguntaActual.respuestas) {
             respuestas.push(
                 `<label>
                   <input type="radio" name="${numeroDePregunta}" value="${letraRespuesta}" />
@@ -122,6 +129,12 @@ function mostrarTest() {
 
 mostrarTest();
 
+/**
+ * Calcula la cantidad de respuestas correctas
+ * @method mostrarResultado
+ * @return - muestra el resultado del quiz a través de  un alert
+ */
+
 function mostrarResultado() {
     const respuestas = contenedor.querySelectorAll(".respuestas");
     let respuestasCorrectas = 0;
@@ -129,11 +142,11 @@ function mostrarResultado() {
     preguntas.forEach((preguntaActual, numeroDePregunta) => {
         const todasLasRespuestas = respuestas[numeroDePregunta];
         const checkboxRespuestas = `input[name='${numeroDePregunta}']:checked`;
-        const respuestaElegida = (
+         const respuestaElegida = (
             todasLasRespuestas.querySelector(checkboxRespuestas) || {}
         ).value;
 
-        if (respuestaElegida === preguntaActual.respuestaCorrecta) {
+       if (respuestaElegida === preguntaActual.respuestaCorrecta) {
             respuestasCorrectas++;
 
             respuestas[numeroDePregunta].style.color = "blue";
@@ -142,11 +155,21 @@ function mostrarResultado() {
         }
     });
 
-    resultadoTest.innerHTML =
-        "Usted ha acertado " +
+    alert(resultadoTest.innerHTML = "Usted ha acertado " +
         respuestasCorrectas +
         " preguntas de un total de " +
-        preguntas.length;
+        preguntas.length);
 }
 
 botonRes.addEventListener("click", mostrarResultado);
+
+/**
+ * Limpia el preguntero
+ * @method reiniciar
+ * @return - muestra el quiz limpio
+ */
+
+function reiniciar() {
+    window.location = 'preguntas.html';
+}
+

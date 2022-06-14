@@ -1,6 +1,7 @@
 # Proyecto ¿Programacion?
 Nuestro proyecto se llama "¿Programación?" , en esta página web se desea simular el estilo de "Netflix" pero con explicaciones y videos explicativos tanto del alto nivel como el de bajo nivel de la programación.
 Dentro de estos se irán explicando diversos lenguajes de programación como así sus términos básicos.
+Para complementar, en la página añadimos un Quiz, "¿Qué tanto sé?", para que el usuario pueda poner a pruaba lo que sabe o lo que aprendió visitando los perfiles.
 
 ## Autores
 * Giuliana Sofia Rossi
@@ -10,7 +11,17 @@ Dentro de estos se irán explicando diversos lenguajes de programación como as�
 https://ucc-labcompu2.github.io/proyecto2022-gomez-rossi/
 
 ### Tecnologias usadas
-Hasta el momento las herramientas que utilizamos para
+Las herramientas que utilizamos para
 realizar la página web fueron:
 * HTML
 * CSS
+* JavaScript
+* CANVAS
+
+### Contenido de la página
+* Main Page
+* Profiles Pages
+* Languages Pages
+* Quiz
+
+
