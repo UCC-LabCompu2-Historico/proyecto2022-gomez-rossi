@@ -1,6 +1,7 @@
 const contenedor = document.getElementById("test");
 const botonRes = document.getElementById("botonResultado");
 const resultadoTest = document.getElementById("resultado");
+const grafica = document.querySelector("#grafica");
 
 
 const preguntas = [
@@ -155,10 +156,45 @@ function mostrarResultado() {
         }
     });
 
-    alert(resultadoTest.innerHTML = "Usted ha acertado " +
-        respuestasCorrectas +
-        " preguntas de un total de " +
-        preguntas.length);
+    swal({
+        title: "😁",
+        text: resultadoTest.innerHTML = "USTED HA ACERTADO " + respuestasCorrectas + " PREGUNTAS DE UN TOTAL DE " + preguntas.length,
+        icon: "success",
+        button: "OK",
+    });
+
+    //alert(resultadoTest.innerHTML = "USTED HA ACERTADO " +
+        //respuestasCorrectas +
+        //" PREGUNTAS DE UN TOTAL DE " +
+        //preguntas.length);
+
+    graficar(respuestasCorrectas);
+}
+
+function graficar(respuestasCorrectas) {
+    const ALTURA_CANVAS = 60,
+        ANCHURA_CANVAS = 600;
+
+// Obtener el elemento del DOM
+    const canvas = document.querySelector("#canvas");
+    canvas.width = ANCHURA_CANVAS;
+    canvas.height = ALTURA_CANVAS;
+
+    // Del canvas, obtener el contexto para poder dibujar
+    const contexto = canvas.getContext("2d");
+// Estilo de dibujo
+// Grosor de línea
+    contexto.lineWidth = 5;
+// Color de línea
+    contexto.strokeStyle = "#636064";
+// Color de relleno
+    contexto.fillStyle = "#DB8CF0";
+// Dibujamos un rectángulo con la función rect
+    contexto.rect(5, 5, 525, 50);
+// Hacemos que se dibuje
+    contexto.stroke();
+    //relleno
+    contexto.fillRect(7, 7, respuestasCorrectas*52.2, 46);
 }
 
 botonRes.addEventListener("click", mostrarResultado);
@@ -168,6 +204,8 @@ botonRes.addEventListener("click", mostrarResultado);
  * @method reiniciar
  * @return - muestra el quiz limpio
  */
+
+
 
 function reiniciar() {
     window.location = 'preguntas.html';
