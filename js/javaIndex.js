@@ -3,18 +3,18 @@ const ctx = canvas.getContext('2d');
 
 const width = canvas.width = window.innerWidth;
 const height = canvas.height = window.innerHeight;
+/**funcion para grafica de pelotas en movimiento**/
 
 function random(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
+/**funcion para grafica de pelotas en movimiento**/
 function randomRGB() {
     return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
-
 class Ball {
-
+/** inicializacion de ""ball" **/
     constructor(x, y, velX, velY, color, size) {
         this.x = x;
         this.y = y;
@@ -23,7 +23,7 @@ class Ball {
         this.color = color;
         this.size = size;
     }
-
+/** ejecuta el codigo para el movimiento de las pelotas **/
     draw() {
         ctx.beginPath();
         ctx.fillStyle = this.color;
@@ -85,6 +85,7 @@ while (balls.length < 25) {
 
     balls.push(ball);
 }
+/**funcion en "loop" para el movimiento continuo de las pelotas**/
 
 function loop() {
     ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';

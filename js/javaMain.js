@@ -1,9 +1,9 @@
 const contenedor = document.getElementById("test");
 const botonRes = document.getElementById("botonResultado");
 const resultadoTest = document.getElementById("resultado");
-const grafica = document.querySelector("#grafica");
 const porcentajeTest = document.getElementById("porcentaje");
 
+/** imprime en pantalla las preguntas **/
 
 const preguntas = [
     {
@@ -157,21 +157,22 @@ function mostrarResultado() {
         }
     });
 
-    swal({
+    swal ({
         title: "😁",
         text: resultadoTest.innerHTML = "USTED HA ACERTADO " + respuestasCorrectas + " PREGUNTAS DE UN TOTAL DE " + preguntas.length,
         icon: "success",
         button: "OK",
     });
 
-    //alert(resultadoTest.innerHTML = "USTED HA ACERTADO " +
-        //respuestasCorrectas +
-        //" PREGUNTAS DE UN TOTAL DE " +
-        //preguntas.length);
-
     graficar(respuestasCorrectas);
     porcentajeTest.innerHTML = respuestasCorrectas*10 + "%";
 }
+
+/**
+ * Mustra una barra horizontal
+ * @method graficar
+ * @return - muestra la barra con el porcntaje de respuestas correctas
+ */
 
 function graficar(respuestasCorrectas) {
     const ALTURA_CANVAS = 60,
@@ -197,6 +198,10 @@ function graficar(respuestasCorrectas) {
     contexto.stroke();
     //relleno
     contexto.fillRect(7, 7, respuestasCorrectas*52.2, 46);
+    contexto.font="25pt comics sans";
+    contexto.strokeStyle="green";
+    contexto.lineWidth = 2;
+    contexto.strokeText(respuestasCorrectas*10 + " %",250,40);
 }
 
 botonRes.addEventListener("click", mostrarResultado);
@@ -206,8 +211,6 @@ botonRes.addEventListener("click", mostrarResultado);
  * @method reiniciar
  * @return - muestra el quiz limpio
  */
-
-
 
 function reiniciar() {
     window.location = 'preguntas.html';
