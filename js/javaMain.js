@@ -2,6 +2,7 @@ const contenedor = document.getElementById("test");
 const botonRes = document.getElementById("botonResultado");
 const resultadoTest = document.getElementById("resultado");
 const grafica = document.querySelector("#grafica");
+const porcentajeTest = document.getElementById("porcentaje");
 
 
 const preguntas = [
@@ -169,6 +170,7 @@ function mostrarResultado() {
         //preguntas.length);
 
     graficar(respuestasCorrectas);
+    porcentajeTest.innerHTML = respuestasCorrectas*10 + "%";
 }
 
 function graficar(respuestasCorrectas) {
