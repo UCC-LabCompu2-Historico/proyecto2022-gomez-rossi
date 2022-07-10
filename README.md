@@ -8,7 +8,7 @@ Para complementar, en la página añadimos un Quiz, "¿Qué tanto sé?", para qu
 * Gomez Lucila
 
 ### Link del proyecto
-https://ucc-labcompu2.github.io/proyecto2022-gomez-rossi/
+https://ucc-labcompu2-Historico.github.io/proyecto2022-gomez-rossi/
 
 ### Tecnologias usadas
 Las herramientas que utilizamos para
